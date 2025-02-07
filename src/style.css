@@ -1,0 +1,112 @@
+@import url("../node_modules/modern-normalize/modern-normalize.css");
+@import url("./assets/fonts/stylesheet.css");
+
+:root {
+    line-height: 1.5;
+
+    --page-padding: 1rem 1rem 1rem 2rem;
+    --header-clr: #005b96;
+}
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+  
+ol[role="list"], ul[role="list"], ol, ul {
+    list-style: none;
+    padding-inline: 0;
+}
+  
+h1, h2, h3, h4, h5 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+  
+img {
+    display: block;
+    max-inline-size: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+input,
+textarea,
+select,
+button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*
+styling
+*/
+body {
+    width: 100vw;
+    font-family: "libre_baskervilleregular";
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+ 
+}
+
+button {
+    padding: 0.5em 1.5em;
+    border-radius: 12px;
+    background-color: var(--header-clr);
+    font-family: "libre_baskervilleregular";
+    color: white;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: var(--page-padding);
+    background-color: var(--header-clr);
+}
+
+header > nav {
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+    font-size: 1.25rem;
+}
+
+header > nav > button {
+    border-radius: 0;
+}
+
+button:hover,
+button:focus {
+    border-bottom: 1px solid white;
+}
+
+button:hover,
+img[src $= ".svg"] {
+    cursor: pointer;
+}
+
+img.logo {
+    width: 12em;
+    height: auto;
+}
+
+#content {
+    width: 100%;    
+}

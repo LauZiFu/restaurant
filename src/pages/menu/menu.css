@@ -1,0 +1,84 @@
+/* Menu.css */
+:root {
+    --desc-clr: rgb(51, 51, 51);
+    --line-clr: rgb(172 172 172 / 50%);
+    --desc-font-size: 0.9rem;
+    --disclaimer-font-size: 0.8rem;
+    --category-font-size: 1.5rem;
+    --even-cat-clr: rgb(253, 253, 238);
+    --menu-title: 3rem;
+}
+
+.menu-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 3rem 0;
+    align-items: center;
+}
+
+.menu-content > h1 + div,
+.menu-item > p {
+    color: var(--desc-clr);
+}
+
+.menu-content > h1 + div {
+    font-size: var(--disclaimer-font-size);
+}
+
+.menu-content > h1 {
+    font-family: "libre_baskervillebold";
+    font-size: var(--menu-title);
+}
+
+.menu-content > * {
+    padding: 0 1rem; 
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.category > *{
+    width: min(1216px, 100%);    
+}
+
+.category:nth-child(even) {
+    background-color: var(--even-cat-clr);
+}
+
+.category > h2 {
+    font-size: var(--category-font-size);
+    font-weight: 600;
+    color: var(--header-clr);
+    font-family: "Helvetica";
+    border-bottom: 2px dotted var(--desc-clr);
+    padding: 0.8rem 0;
+}
+
+.menu-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    row-gap: 0.5rem;
+    padding: 0.5rem 0;
+}
+
+.menu-item:not(:last-child){
+    border-bottom: 1px solid var(--line-clr);
+}
+
+.menu-item > h3 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-family: "libre_baskervillebold";
+}
+
+.menu-item > p {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    font-size: var(--desc-font-size);
+}

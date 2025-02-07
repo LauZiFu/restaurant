@@ -4,7 +4,7 @@ class Category {
     #items
     
     constructor(name, items = []) {
-        this.name = name;
+        this.name = name.toUpperCase();
         this.#items = items;
     }
 
