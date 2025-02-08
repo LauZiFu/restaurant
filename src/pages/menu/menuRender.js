@@ -53,12 +53,17 @@ function renderMenu(contentDiv, menu){
     const menuItems = menu.getCategories();
 
     const menuDiv = document.createElement("div");
+    const image = document.createElement("div");
+    const imageTitle = document.createElement("h1");
     const title = document.createElement("h1");
     const disclaimer = document.createElement("div");
 
+    imageTitle.textContent = "Our Menu";
+    image.appendChild(imageTitle);
+
     disclaimer.textContent = "*Menu prices and menu items are subject to change without prior notice.";
     title.textContent = "Lunch & Dinner Menu";
-    [title, disclaimer].forEach((category) => menuDiv.appendChild(category));
+    [image, title, disclaimer].forEach((category) => menuDiv.appendChild(category));
 
     menuItems.forEach((category) => menuDiv.appendChild(renderCategory(category)));
     menuDiv.classList.toggle("menu-content");
