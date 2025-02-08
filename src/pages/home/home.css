@@ -1,0 +1,113 @@
+/*
+home.css
+home page styling
+*/
+
+:root {
+    --hero-title-font-size: calc(var(--menu-title) + 0.8vw);
+    --subtitle-font-size: calc( var(--hero-title-font-size) * 0.4);
+    --hero-button-font: calc(var(--subtitle-font-size) * 0.8);
+    --welcome-title-size: min(calc(2rem + 0.5vw), 2.5rem);
+    --welcome-text-size: calc(var(--welcome-title-size) * 0.4);
+    --welcome-btn-font: calc(var(--welcome-text-size));
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero {
+    background-image: url("/src/assets/images/hero-pasta.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+}
+
+.welcome-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem;
+    width: min(1400px, 100%);    
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--hero-title-font-size);
+    height: calc(13em - 8vw);
+    color: white;
+    gap: 0.8em;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--bg-transparent);
+
+}
+
+.hero .container > button{
+    font-size: var(--hero-button-font);
+}
+
+.hero .container p {
+    font-size: var(--subtitle-font-size);
+}
+
+.hero .container *:not(button) {
+    background-image: none;
+    background-color: transparent;
+    width: min(var(--content-width), 100%);
+}
+
+.hero .container > h1 {
+    line-height: 1.2;
+}
+
+.welcome {
+    display: grid;
+    grid-template-columns:  repeat(2, max(200px, calc(50% - 1.5em)));
+    grid-template-rows: repeat(4, auto);
+    column-gap: 1.5em;
+    row-gap: 1.5em;
+    margin: 0 auto;
+}
+
+.welcome > h2{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    font-size: var(--welcome-title-size);
+}
+
+.welcome > p {
+    font-size: var(--welcome-text-size);
+}
+
+.welcome > p:first-child{
+    grid-row:2/3;
+    grid-column: 2/3;
+}
+
+.welcome > p:nth-child(3){
+    grid-row:3/4;
+    grid-column: 2/3;
+}
+
+.welcome > button{
+    grid-row:4/5;
+    grid-column: 2/3;
+    justify-self: start;
+    align-self: center;
+    font-size: var(--welcome-btn-font);
+}
+
+.welcome > img {
+    grid-row: 1/5;
+    grid-column: 1/2;
+}
+
+

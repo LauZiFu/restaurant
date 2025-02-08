@@ -1,3 +1,8 @@
+/**
+ * Renderer Module for the Menu Page
+ */
+
+
 import "./menu.css"
 
 /**
@@ -51,6 +56,7 @@ function renderCategory(category){
  */
 function renderMenu(contentDiv, menu){
     const menuItems = menu.getCategories();
+    contentDiv.innerHTML = "";
 
     const menuDiv = document.createElement("div");
     const image = document.createElement("div");

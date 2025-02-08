@@ -7,6 +7,8 @@
     --page-padding: 1rem 1rem 1rem 2rem;
     --header-clr: #005b96;
     --footer-height: 6em;
+    --bg-transparent: rgb(0 0 0/50%);
+    --content-width: 1024px;
 }
 
 h1, h2, h3, h4, h5, figure, p, ol, ul {
@@ -67,18 +69,32 @@ body {
  
 }
 
+h1,
+h2 {
+    font-family: "libre_baskervillebold";
+}
+
 button {
-    padding: 0.5em 1.5em;
-    border-radius: 12px;
+    padding: 1em 2em;
     background-color: var(--header-clr);
     font-family: "libre_baskervilleregular";
     color: white;
+}
+
+button:hover{
+    filter: brightness(90%);
+}
+
+button:hover,
+img[src $= ".svg"] {
+    cursor: pointer;
 }
 
 header,
 footer {
     display: flex;
     width: 100%;
+    gap: 1rem;
     justify-content: space-between;
     padding: var(--page-padding);
     background-color: var(--header-clr);
@@ -86,24 +102,22 @@ footer {
 
 header > nav {
     display: flex;
-    gap: 1.5em;
     align-items: center;
     font-size: 1.25rem;
+    flex-flow: wrap;
 }
 
 header > nav > button {
     border-radius: 0;
 }
 
-button:hover,
-button:focus {
+nav > button:hover,
+nav > button:focus {
+    filter: none;
     border-bottom: 1px solid white;
 }
 
-button:hover,
-img[src $= ".svg"] {
-    cursor: pointer;
-}
+
 
 img.logo {
     width: 12em;
